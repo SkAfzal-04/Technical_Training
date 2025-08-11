@@ -1,0 +1,14 @@
+from itertools import permutations
+
+
+s = input("Enter a string: ").strip()
+print(f"Input string: {s}")
+
+perm = permutations(s)
+perm_list = list(perm)  
+print("All permutations (as tuples):")
+for i in enumerate(perm_list):
+    print(f"{i}")
+result = [''.join(p) for p in perm_list]
+print("Final result (as list of strings):")
+print(result)
